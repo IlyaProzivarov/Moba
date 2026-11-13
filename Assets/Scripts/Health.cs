@@ -17,7 +17,8 @@ public class Health : MonoBehaviour
     public event Action<float, float> Changed;   
     public event Action<Health> Died;
 
-    public static event Action<Health, Health> AnyDied;   
+    public static event Action<Health, Health> AnyDied;
+    public static event Action<Health, float, Health> AnyDamaged;   
 
     void Awake()
     {
@@ -28,8 +29,10 @@ public class Health : MonoBehaviour
     {
         if (IsDead || amount <= 0f) return;
 
-        Current = Mathf.Max(0f, Current - amount);
+        float dealt = Mathf.Min(Current, amount);   
+        Current -= dealt;
         Changed?.Invoke(Current, maxHealth);
+        AnyDamaged?.Invoke(this, dealt, attacker);
 
         if (Current <= 0f)
         {
