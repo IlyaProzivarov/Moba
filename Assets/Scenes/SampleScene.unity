@@ -159,6 +159,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 327306432}
+  - component: {fileID: 327306433}
   m_Layer: 0
   m_Name: RedSpawn
   m_TagString: Untagged
@@ -181,6 +182,26 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &327306433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 327306431}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be6052146e05a224a86000be6013ef91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  unitPrefab: {fileID: 51424761218408367, guid: c935a54e261402e4e873a3014f459858, type: 3}
+  firstWaveDelay: 3
+  waveInterval: 20
+  delayBetweenUnits: 0.6
+  unitsPerWave: 3
+  wavesPerBonusUnit: 3
+  maxUnitsPerWave: 6
+  spawnSpread: 0.8
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0
@@ -1443,6 +1464,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1858118877}
+  - component: {fileID: 1858118878}
   m_Layer: 0
   m_Name: BlueSpawn
   m_TagString: Untagged
@@ -1465,6 +1487,26 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1858118878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1858118876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be6052146e05a224a86000be6013ef91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  unitPrefab: {fileID: 944143719557902899, guid: 8864215a551bbed4d9d2417b0e7819ff, type: 3}
+  firstWaveDelay: 3
+  waveInterval: 20
+  delayBetweenUnits: 0.6
+  unitsPerWave: 3
+  wavesPerBonusUnit: 3
+  maxUnitsPerWave: 6
+  spawnSpread: 0.8
 --- !u!1 &1873764609
 GameObject:
   m_ObjectHideFlags: 0
