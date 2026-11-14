@@ -39,6 +39,7 @@ public class HeroController : MonoBehaviour
     float nextScanTime;
     Vector3 visualStartPos;
     bool lunging;
+    public bool ControlLocked { get; set; }   
 
     void Awake()
     {
@@ -67,6 +68,7 @@ public class HeroController : MonoBehaviour
     void Update()
     {
         if (health.IsDead) return;
+        if (ControlLocked) return;
 
         ReadInput();
 
@@ -131,6 +133,12 @@ public class HeroController : MonoBehaviour
     bool Arrived()
     {
         return !agent.pathPending && agent.remainingDistance <= agent.stoppingDistance + 0.05f;
+    }
+
+    public void StopActions()
+    {
+        moveCommand = false;
+        ClearTarget();
     }
 
     void SetTarget(Health h, Collider c, bool forced)
