@@ -51,6 +51,13 @@ public class Health : MonoBehaviour
         Changed?.Invoke(Current, maxHealth);
     }
 
+    public void Revive()
+    {
+        IsDead = false;
+        Current = maxHealth;
+        Changed?.Invoke(Current, maxHealth);
+    }
+
     [ContextMenu("Test: Take 100 Damage")]
     void TestDamage()
     {
